@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <CheckBox
+        android:id="@+id/form_inundacion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="inundación"
+        app:layout_constraintBottom_toBottomOf="@+id/form_deslave2"
+        app:layout_constraintEnd_toStartOf="@+id/form_zona_volcanica2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/form_deslave2"
+        app:layout_constraintTop_toTopOf="@+id/form_deslave2" />
+
+    <CheckBox
+        android:id="@+id/form_deslave2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="deslave"
+        app:layout_constraintEnd_toStartOf="@+id/form_inundacion2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/form_zona_sísmica2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="zona sísmica"
+        app:layout_constraintBottom_toBottomOf="@+id/form_derrumbes2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/form_derrumbes2"
+        app:layout_constraintTop_toTopOf="@+id/form_derrumbes2" />
+
+    <CheckBox
+        android:id="@+id/form_incendio_forestal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=" incendio forestal"
+        app:layout_constraintEnd_toStartOf="@+id/form_derrumbes2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/form_deslave2" />
+
+    <CheckBox
+        android:id="@+id/form_zona_volcanica2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="zona volcánica"
+        app:layout_constraintBottom_toBottomOf="@+id/form_inundacion2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/form_inundacion2"
+        app:layout_constraintTop_toTopOf="@+id/form_inundacion2" />
+
+    <CheckBox
+        android:id="@+id/form_derrumbes2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="derrumbes"
+        app:layout_constraintBottom_toBottomOf="@+id/form_incendio_forestal2"
+        app:layout_constraintEnd_toStartOf="@+id/form_zona_sísmica2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/form_incendio_forestal2"
+        app:layout_constraintTop_toTopOf="@+id/form_incendio_forestal2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="403dp"
+        android:layout_height="741dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:paddingHorizontal="4dp"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/form_incendio_forestal2"
+        tools:listitem="@layout/fragment_animals" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
